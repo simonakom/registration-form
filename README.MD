@@ -6,3 +6,4 @@ This assignment is about recreating responsive Figma design using html/css:
 
 <h4>🔹 SingIn page sample - <a href="https://simonakom.github.io/registration-form/registration.html" style="font-size:small;">View</a><h4>
 
+
