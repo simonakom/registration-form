@@ -8,14 +8,13 @@ body {
     margin: 0;
     padding: 0;
 }
+.note {
+    display: none;
+}
 /* White block */
 .main_block {
     background-color: #FFF;
-    /* min-height: 768px; */
     display: flex;
-    /* delete to have full screen */
-    max-width: 1363px; 
-    /* margin: 100px auto;   */
 }
 /* Left side */
 .left {
@@ -28,12 +27,13 @@ body {
 }
 .frame {
     background-color: rgba(0, 0, 0, 0.15);
-    height: 744px; 
+    min-height: 744px; 
     padding: 24px;
 }
 .text_box {
     height: 223px;  
     padding: 36px;
+    overflow: hidden;
 }
 .intro_text {
     font-family: 'Open Sans', sans-serif;
@@ -74,11 +74,12 @@ body {
 }
 /* SingIn buttons */
 .google {
-    min-width: 281px;
+    width: 281px;
     min-height: 49px;
     border: 1px solid #E5E7EB;
     border-radius: 4px;
     background:#4285F4;  
+    cursor: pointer;
 
     text-align: center;
     padding-left: 40px;
@@ -94,13 +95,14 @@ body {
     position: absolute;
     padding: 15px 2px; 
     z-index: 2;
-    }
+}
 .facebook {
     min-width: 47px;
     min-height: 49px;
     border: 1px solid #E5E7EB;
     border-radius: 4px;
     background:#ECF2FC;
+    cursor: pointer;
 
     text-align: center;
     color: #FFF; 
@@ -125,9 +127,8 @@ opacity: 0.8;
 }
 /* or */
 .line {
-    max-width: 340px;
+    width: 340px;
     height: 40px;
-
     margin-top: 9px;
     margin-bottom: 9px;
 }
@@ -137,13 +138,14 @@ opacity: 0.8;
 }
 /* @ */
 .input_field {
-    min-width: 340px;
+    width: 340px;
     height: 48px;
     text-align: center;
     border-radius: 4px;
     border: 1px solid #E5E7EB;
     background: #FFF;   
     font-size: 14px;
+    cursor: pointer;
 }
 .a_icon {
     position: absolute;
@@ -152,7 +154,7 @@ opacity: 0.8;
 }
 ::placeholder {
     color: #D1D5DB;
-  }
+}
  /* Password */
  .password {
     max-width: 340px;
@@ -161,7 +163,7 @@ opacity: 0.8;
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
- }
+}
 a {
     text-decoration: none;
     color: #6D58BA;
@@ -177,7 +179,7 @@ a {
 }
 /* Continue */
 .continue {
-    min-width: 340px;
+    width: 340px;
     height: 49px;
     text-align: center;
     color: #FFF;
@@ -190,6 +192,7 @@ a {
     background-color: #724DFF;
     border-radius: 4px;
     line-height: 24px;     
+    cursor: pointer;
 }
 .continue:hover {
     transform: scale(1.1);
@@ -197,8 +200,7 @@ a {
     opacity: 0.8;
  }
 /* Questions */
-.Questions {
-    
+.questions {
     color:#6B7280;
     font-family: Open Sans;
     font-size: 14px;
@@ -206,11 +208,11 @@ a {
     font-weight: 600;
     line-height: 26px; 
 }
-.Questions p :hover {
+.questions p :hover {
     color: #724DFF;
     font-size: 15px;
 }
-/* Repsonsive */
+/* Responsive */
 @media screen and (max-width: 1024px) {
     .left {
         min-width: auto;  
@@ -221,6 +223,10 @@ a {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding: 20px;
+    }
+    .right {
+        padding: 20px;
     }
     .left  {
         background-image: url(Pictures/background.png);
@@ -246,10 +252,91 @@ a {
         justify-content: center;
     }
     .centered_form {
-    height: 30rem ;
-    padding-left: 20px;
-    padding-right: 20px;
+        height: 30rem ;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
-
-
+@media screen and (max-width: 350px) {
+    .text_box img{
+        width: 180px;
+    }
+    .intro {
+        margin-left: 50px;
+        overflow: hidden !important;
+    }
+    .google {
+        width: 200px;
+        margin-left: 50px;
+        font-size: 13px;
+    }
+    .google_icon {
+        padding: 15px 55px; 
+        }
+    .input_field {
+        width: 270px;
+        margin-left: 50px;
+        font-size: 13px;
+    }
+    .a_icon {
+        position: absolute;
+        padding: 15px 10px 8px;
+        max-width: 40px; 
+        margin-left: 50px;
+    }
+    .input_field::placeholder {
+        padding-left: 20px;
+    }
+    .password {
+        width: 200px;
+        margin-left: 50px;
+        font-size: 13px;
+    }
+    .continue {
+        width: 270px;
+        margin-left: 50px;
+        font-size: 13px;
+    }
+    .questions {
+        width: 150px;
+        margin-left: 50px;
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 305px) {
+    form {
+        display: none;
+    }
+    .text_box img{
+        width: 150px;
+    }
+    .note {
+        color: #595d65;
+        display: block;
+        overflow:hidden
+    }
+}
+@media screen and (max-width: 232px) {
+    .text_box img{
+        width: 100px;
+    }
+    .note {
+        margin-top: 200px;
+    }
+}
+@media screen and (max-width: 232px) {
+    .text_box img{
+        display: none;
+    }
+    .note {
+        margin-top: 200px;
+    }
+}
+@media screen and (max-width: 185px) {
+    .note {
+        margin-top: 350px;
+    }
+    .frame{
+        display: none;
+    }
+}
