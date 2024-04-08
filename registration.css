@@ -313,7 +313,8 @@ a {
     .note {
         color: #595d65;
         display: block;
-        overflow:hidden
+        overflow: hidden;
+        margin-top: -450px;
     }
 }
 @media screen and (max-width: 232px) {
@@ -321,21 +322,10 @@ a {
         width: 100px;
     }
     .note {
-        margin-top: 200px;
-    }
-}
-@media screen and (max-width: 232px) {
-    .text_box img{
-        display: none;
-    }
-    .note {
-        margin-top: 200px;
+        margin-top: -450px;
     }
 }
 @media screen and (max-width: 185px) {
-    .note {
-        margin-top: 350px;
-    }
     .frame{
         display: none;
     }
