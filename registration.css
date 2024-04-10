@@ -95,6 +95,7 @@ body {
     position: absolute;
     padding: 15px 2px; 
     z-index: 2;
+    cursor: pointer;
 }
 .facebook {
     min-width: 47px;
@@ -102,7 +103,6 @@ body {
     border: 1px solid #E5E7EB;
     border-radius: 4px;
     background:#ECF2FC;
-    cursor: pointer;
 
     text-align: center;
     color: #FFF; 
@@ -114,6 +114,7 @@ body {
 .facebook_icon {
     position: absolute;
     padding: 14px 8px;  
+    cursor: pointer;
 }
 .sing_button .google:hover {
     transform: scale(1.02);
@@ -175,7 +176,7 @@ a {
 }
 .password p :hover {
     color: #724DFF;
-    font-size: 15px;
+    font-size: 14px;
 }
 /* Continue */
 .continue {
@@ -195,7 +196,7 @@ a {
     cursor: pointer;
 }
 .continue:hover {
-    transform: scale(1.1);
+    transform: scale(1.0);
     transition: transform 0.3s ease-in-out;
     opacity: 0.8;
  }
@@ -210,7 +211,7 @@ a {
 }
 .questions p :hover {
     color: #724DFF;
-    font-size: 15px;
+    font-size: 14px;
 }
 /* Responsive */
 @media screen and (max-width: 1024px) {
